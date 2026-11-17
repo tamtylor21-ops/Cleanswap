@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CleanChoice | Smarter Ingredients. Affordable Choices.</title>
+<style>
+:root {
+  --mauve:#987284;
+  --sage:#9DBF9E;
+  --soft-sage:#D0D6B5;
+  --blush:#F9B5AC;
+  --coral:#EE7674;
+  --cream:#FAF8F3;
+  --ink:#493C42;
+  --white:#FFFFFF;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:Arial,sans-serif;
+  line-height:1.6;
+}
+header {
+  background:var(--mauve);
+  color:white;
+  padding:18px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:14px;
+}
+.logo {
+  font-family:Georgia,serif;
+  font-size:29px;
+  font-weight:bold;
+}
+nav {display:flex;gap:18px;flex-wrap:wrap}
+nav a {color:white;text-decoration:none;font-size:14px}
+nav a:hover {text-decoration:underline}
+.hero {
+  background:var(--soft-sage);
+  padding:75px 8%;
+  text-align:center;
+}
+.eyebrow {
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:12px;
+  font-weight:bold;
+  color:var(--mauve);
+}
+h1,h2,h3 {font-family:Georgia,serif;line-height:1.2}
+h1 {font-size:clamp(36px,6vw,58px);max-width:850px;margin:15px auto}
+.hero p {max-width:650px;margin:15px auto 25px}
+.button {
+  display:inline-block;
+  background:var(--coral);
+  color:var(--ink);
+  border:0;
+  padding:13px 24px;
+  border-radius:8px;
+  font-weight:bold;
+  text-decoration:none;
+  cursor:pointer;
+}
+.button:hover {filter:brightness(.96)}
+section {padding:65px 7%}
+.section-title {text-align:center;margin-bottom:32px}
+.section-title h2 {font-size:34px;margin-bottom:8px}
+.section-title p {color:#71656A}
+.features {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:18px;
+}
+.feature {
+  padding:25px;
+  background:white;
+  border-radius:14px;
+  border:1px solid #eee7e4;
+}
+.feature .symbol {font-size:30px}
+.feature h3 {font-size:21px}
+.search-area {
+  background:var(--soft-sage);
+  border-radius:18px;
+  padding:28px;
+  max-width:950px;
+  margin:auto;
+}
+.controls {
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:12px;
+}
+input,select {
+  width:100%;
+  padding:13px;
+  border:1px solid #d8ced2;
+  border-radius:8px;
+  background:white;
+  color:var(--ink);
+  font-size:15px;
+}
+.results {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:18px;
+  margin-top:25px;
+}
+.product {
+  background:white;
+  border-radius:14px;
+  padding:20px;
+  border:1px solid #eee7e4;
+}
+.product h3 {font-size:21px;margin:10px 0}
+.product .price {font-size:22px;font-weight:bold}
+.tag {
+  display:inline-block;
+  padding:5px 9px;
+  background:#f5e7e8;
+  color:#82566d;
+  border-radius:20px;
+  font-size:12px;
+  margin:3px;
+}
+.tag.good {background:#e4f0e3;color:#426e4b}
+.tag.warning {background:#fff0dc;color:#8b5d20}
+.product button {
+  margin-top:12px;
+  width:100%;
+}
+.details {
+  background:#FAF7F4;
+  padding:12px;
+  border-radius:8px;
+  font-size:13px;
+  margin-top:12px;
+}
+.alternatives {
+  background:var(--blush);
+  border-radius:16px;
+  padding:28px;
+}
+.learn {
+  background:var(--sage);
+}
+.learn-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+.learn-card {
+  background:white;
+  padding:22px;
+  border-radius:12px;
+}
+.notice {
+  font-size:12px;
+  color:#71656A;
+  background:white;
+  padding:16px;
+  border-radius:10px;
+  margin-top:25px;
+}
+footer {
+  background:var(--mauve);
+  color:white;
+  text-align:center;
+  padding:30px 15px;
+  font-size:13px;
+}
+@media(max-width:650px) {
+  header {justify-content:center;text-align:center}
+  nav {justify-content:center}
+  .controls {grid-template-columns:1fr}
+  section {padding:45px 5%}
+  .hero {padding:55px 6%}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">CleanChoice</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#search">Search Products</a>
+    <a href="#alternatives">Alternatives</a>
+    <a href="#learn">Learn</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="eyebrow">Smarter Ingredients. Affordable Choices.</div>
+  <h1>Beauty starts with knowing what's inside.</h1>
+  <p>Explore personal care ingredients, learn about chemicals of concern, and discover affordable alternatives that fit your budget.</p>
+  <a class="button" href="#search">Explore Products</a>
+</section>
+
+<section>
+  <div class="section-title">
+    <div class="eyebrow">The CleanChoice approach</div>
+    <h2>Shop smarter, not more expensive.</h2>
+    <p>Knowledge should be accessible, and informed choices should be affordable.</p>
+  </div>
+  <div class="features">
+    <div class="feature">
+      <div class="symbol">🔬</div>
+      <h3>Ingredient Screening</h3>
+      <p>Explore disclosed ingredients and identify listed chemicals of concern.</p>
+    </div>
+    <div class="feature">
+      <div class="symbol">🌿</div>
+      <h3>Affordable Alternatives</h3>
+      <p>Discover alternatives with transparent ingredient information and budget-friendly prices.</p>
+    </div>
+    <div class="feature">
+      <div class="symbol">⚖️</div>
+      <h3>Compare Products</h3>
+      <p>Compare ingredient lists, product sizes, prices, and cost per ounce.</p>
+    </div>
+    <div class="feature">
+      <div class="symbol">📚</div>
+      <h3>Consumer Education</h3>
+      <p>Learn about phthalates, endocrine disruption, and reproductive health research.</p>
+    </div>
+  </div>
+</section>
+
+<section id="search">
+  <div class="section-title">
+    <div class="eyebrow">Product explorer</div>
+    <h2>Find your everyday products.</h2>
+    <p>Search by product name or explore a category.</p>
+  </div>
+  <div class="search-area">
+    <div class="controls">
+      <input id="searchInput" placeholder="Search product or brand..." oninput="renderProducts()">
+      <select id="category" onchange="renderProducts()">
+        <option value="All">All categories</option>
+        <option value="Moisturizer">Moisturizers</option>
+        <option value="Shampoo">Shampoo</option>
+        <option value="Body Lotion">Body lotion</option>
+        <option value="Deodorant">Deodorant</option>
+      </select>
+      <select id="budget" onchange="renderProducts()">
+        <option value="1000">Any budget</option>
+        <option value="10">Under $10</option>
+        <option value="20">Under $20</option>
+        <option value="30">Under $30</option>
+      </select>
+    </div>
+    <div class="results" id="results"></div>
+    <div class="notice">
+      Demonstration database: all products, brands, prices, and ingredient examples below are fictional. They are not verified commercial product assessments or evidence of actual chemical presence.
+    </div>
+  </div>
+</section>
+
+<section id="alternatives">
+  <div class="alternatives">
+    <div class="eyebrow">Budget-conscious shopping</div>
+    <h2>Affordable choices matter.</h2>
+    <p>CleanChoice is designed to help consumers compare products based on ingredient transparency, disclosed ingredients, product suitability, and affordability.</p>
+    <p>Our goal is to prioritize suitable alternatives that offer transparent ingredient information at accessible prices.</p>
+    <a class="button" href="#search">Explore Product Options</a>
+  </div>
+</section>
+
+<section id="learn" class="learn">
+  <div class="section-title">
+    <div class="eyebrow">Education and awareness</div>
+    <h2>Understand what's in your products.</h2>
+    <p>Explore the science behind everyday chemical exposure.</p>
+  </div>
+  <div class="learn-grid">
+    <div class="learn-card">
+      <h3>What are phthalates?</h3>
+      <p>Phthalates are a group of chemicals used in various consumer applications. Some have been used in fragrance formulations and personal care products.</p>
+    </div>
+    <div class="learn-card">
+      <h3>Endocrine disruption</h3>
+      <p>Some chemicals can interfere with the body's hormone signaling system, which regulates many important functions.</p>
+    </div>
+    <div class="learn-card">
+      <h3>Phthalates and ovarian health</h3>
+      <p>Explore scientific research investigating potential relationships between phthalate exposure and ovarian function.</p>
+    </div>
+    <div class="learn-card">
+      <h3>Make informed choices</h3>
+      <p>Learn how ingredient disclosure, product labels, and exposure pathways can inform consumer decisions.</p>
+    </div>
+  </div>
+  <div class="notice">
+    Educational information only. Research on endocrine-disrupting chemicals is evolving. Health associations do not automatically establish causation, and ingredient screening is not a measure of actual exposure or medical risk.
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="logo">CleanChoice</div>
+  <p>Smarter Ingredients. Affordable Choices.</p>
+  <p>Educational consumer resource | Product data demonstration</p>
+</footer>
+
+<script>
+const products = [
+ {name:"Everyday Moisturizer",brand:"Demo Botanics",category:"Moisturizer",price:12,size:4,ingredients:"Water, glycerin, shea butter, fragrance",flags:["Fragrance: disclosure incomplete"],alternative:"Simple Moisture Cream"},
+ {name:"Simple Moisture Cream",brand:"Demo Essentials",category:"Moisturizer",price:9,size:4,ingredients:"Water, glycerin, shea butter",flags:[],alternative:"Everyday Moisturizer"},
+ {name:"Daily Hydration Lotion",brand:"Demo Naturals",category:"Body Lotion",price:8,size:8,ingredients:"Water, glycerin, sunflower oil",flags:[],alternative:"Everyday Moisturizer"},
+ {name:"Fresh Scent Shampoo",brand:"Demo Hair",category:"Shampoo",price:14,size:12,ingredients:"Water, cleansing agents, fragrance",flags:["Fragrance: disclosure incomplete"],alternative:"Gentle Daily Shampoo"},
+ {name:"Gentle Daily Shampoo",brand:"Demo Essentials",category:"Shampoo",price:10,size:12,ingredients:"Water, cleansing agents",flags:[],alternative:"Fresh Scent Shampoo"},
+ {name:"Soft Skin Deodorant",brand:"Demo Care",category:"Deodorant",price:7,size:2.5,ingredients:"Moisturizing agents, fragrance",flags:["Fragrance: disclosure incomplete"],alternative:"Unscented Demo Deodorant"},
+ {name:"Unscented Demo Deodorant",brand:"Demo Basics",category:"Deodorant",price:6,size:2.5,ingredients:"Moisturizing agents",flags:[],alternative:"Soft Skin Deodorant"}
+];
+
+function renderProducts() {
+ const query=document.getElementById("searchInput").value.toLowerCase();
+ const category=document.getElementById("category").value;
+ const budget=Number(document.getElementById("budget").value);
+ const filtered=products.filter(p=>
+   (p.name.toLowerCase().includes(query)||p.brand.toLowerCase().includes(query)||p.ingredients.toLowerCase().includes(query)) &&
+   (category==="All"||p.category===category) &&
+   p.price<=budget
+ );
+ const results=document.getElementById("results");
+ results.innerHTML="";
+ if(!filtered.length) {
+   results.innerHTML="<p>No matching demonstration products found. Try another search or budget.</p>";
+   return;
+ }
+ filtered.forEach(p=>{
+   const card=document.createElement("article");
+   card.className="product";
+   const flags=p.flags.length
+     ?p.flags.map(f=>`<span class="tag warning">${f}</span>`).join("")
+     :'<span class="tag good">No targeted chemicals flagged in demo data</span>';
+   card.innerHTML=`
+     <span class="tag">${p.category}</span>
+     <h3>${p.name}</h3>
+     <p>${p.brand}</p>
+     <div class="price">$${p.price.toFixed(2)}</div>
+     <p>${p.size} oz · $${(p.price/p.size).toFixed(2)} per oz</p>
+     ${flags}
+     <div class="details">
+       <strong>Ingredients:</strong><br>${p.ingredients}
+       <br><br><strong>Suggested alternative:</strong><br>${p.alternative}
+     </div>
+     <button class="button" onclick="showAlternative('${p.name.replace(/'/g,"\\'")}')">Explore alternative</button>`;
+   results.appendChild(card);
+ });
+}
+function showAlternative(name) {
+ const p=products.find(x=>x.name===name);
+ const alternative=products.find(x=>x.name===p.alternative);
+ if(alternative) {
+   alert("Demonstration alternative: "+alternative.name+
+   "\nPrice: $"+alternative.price.toFixed(2)+
+   "\nUnit price: $"+(alternative.price/alternative.size).toFixed(2)+
+   " per oz\n\nCompare ingredients and product suitability before choosing.");
+ } else {
+   alert("No demonstration alternative is currently listed.");
+ }
+}
+renderProducts();
+</script>
+</body>
+</html>
